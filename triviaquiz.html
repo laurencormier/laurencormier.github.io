@@ -1,0 +1,68 @@
+<script>
+var step = 1;
+var score = 0;
+function chat() {
+  input = document.getElementById("input");
+  output = document.getElementById("output");
+  if(step == 1) {
+    output.innerHTML += "Great "+input.value+"! Lets do a trivia game! <br>";
+  } else if(step == 2){
+    output.innerHTML += "First, Who developed and patented the electrical telegraph in the United States in 1837?<br>"
+  }else if(step == 3){
+    // Check if they weree right and give them a score if they were
+    if(input.value.match(/morse/i)) {
+      score += 1;
+    }
+    output.innerHTML += "The Correct Answer was Samuel Morse<br>"
+  }else if(step == 4){
+    output.innerHTML += "What natural phenomena are measured by the Richter scale?<br>"  
+  } else if(step == 5){
+    if(input.value.match(/quake/i)) 
+      score += 1;
+  output.innerHTML += "The correct answer was Earthquakes.<br>"
+  }else if(step == 6){
+  output.innerhTML += "Now lets look at some movies!<br>"
+} else if (step == 7){
+  output.innerHTML += "What creature is Sabastion from Disneys the Little Mermaid<br>"
+  }else if (step == 8){
+    if(input.value.match(/crab/i))
+      score += 1;
+  output.innerHTML += "He is a Crab<br>"
+}else if (step == 9){
+ output.innerHTML += "Who is the actor who played Spiderman the best. (there is only one correct answer)<br>"
+}else if(step == 10){
+  if(input.value.match(/Holland/i))
+      score += 1;
+  output.innerHTML += "It is Tom Holland. There will never be a better siderman than Tom Holland.<br>"
+}else if(step == 11){
+  output.innerHTML += "In Monty Python and the Holy Grail what is the Enchanters name? <br>"
+}else if(step == 12){
+  if(input.value.match(/tim/i)) 
+      score += 1;
+  output.innerHTML += "Some call him Tim.<br>"
+}else if(step == 13){
+  output.innerHTML += "In Top Gun who lost that loving feeling?<br>"
+}else if(step == 14){
+  if(input.value.match(/Charlie/i)) 
+      score += 1;
+  output.innerHTML += "Charlie Blackwood (Kelly McGillis is the actress so that works too)<br>"
+}else if(step == 15){
+  output.innerHTML += "One last question!<br>"
+}else if(step == 16){
+  output.innerHTML += "What is the infinty stone inside Visions head?<br>"
+}else if(step == 17){
+  if(input.value.match(/mind/i)) 
+      score += 1;
+  output.innerHTML += "The Mind Stone<br>"
+}else if(step == 18){
+  output.innerHTML += "Thanks For Playing!"
+}
+  output.innerHTML += "Your score is "+score+"<br>";
+
+  step += 1;
+  input.value = "";
+}
+</script>
+
+<div id=output>What is your name?</div>
+<input id=input> <button onclick="chat()">Chat</button></input>
