@@ -54,7 +54,13 @@ function chat() {
   if(input.value.match(/mind/i)) 
       score += 1;
   output.innerHTML += "The Mind Stone<br>"
-}else if(step == 18){
+}else if(step == 18){ 
+  output.innerHTML += "As the great Enchanter, Tim, once asked ... What is Sir Lancelot favorite color?"
+}else if(step == 19){
+  if(input.value.match(/blue/i))
+    score += 1;
+  output.innerHTML += "Blue<br>" 
+}else if(step == 20){
   output.innerHTML += "Thanks For Playing!"
 }
   output.innerHTML += "Your score is "+score+"<br>";
